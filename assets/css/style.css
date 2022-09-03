@@ -1,0 +1,297 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+/* pallete */
+:root {
+  --main: #f1c40f;
+  --main-color-gradient: linear-gradient(
+    90deg,
+    rgba(241, 196, 15, 1) 0%,
+    rgba(251, 221, 102, 1) 100%
+  );
+}
+
+/* reset */
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* body */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* geral */
+.container {
+  width: 98%;
+  max-width: 1400px;
+  padding: 0 2%;
+  margin: auto;
+}
+
+.color {
+  color: var(--main);
+}
+
+.dark {
+  background-color: #111;
+}
+
+.light-dark {
+  background-color: rgb(25, 25, 25);
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: var(--main);
+  margin: 15px 0;
+}
+
+a.button {
+  width: 150px;
+  padding: 13px;
+  display: block;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #000;
+  transition: 0.2s;
+  background: var(--main-color-gradient);
+}
+
+a.button:hover {
+  transform: scale(1.1);
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* scroll */
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #111;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--main);
+}
+
+/* menu mobile */
+.menu-mobile {
+  width: 100vw;
+  height: 80vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #111;
+  text-align: center;
+}
+
+.menu-mobile a {
+  display: block;
+  margin: 90px 0;
+  transition: 0.3s;
+}
+
+.menu-mobile a:hover {
+  color: var(--main);
+}
+
+/* header */
+#header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header .logo-area img {
+  width: 150px;
+  cursor: pointer;
+}
+
+#header .menu-mobile-area {
+  display: none;
+}
+
+#header .menu-mobile-area i {
+  font-size: 2rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#header .menu-mobile-area i:hover {
+  color: var(--main);
+}
+
+#header .menu-desktop-area ul {
+  display: flex;
+}
+
+#header .menu-desktop-area a {
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 50px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  display: block;
+}
+
+#header .menu-desktop-area a:hover {
+  background-color: var(--main);
+  color: #000;
+}
+
+/* about */
+section#about .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section#about .image-about img {
+  width: 600px;
+  margin-bottom: 50px;
+}
+
+section#about .text-about {
+  width: 500px;
+  margin-left: 50px;
+}
+
+section#about .title-about {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+section#about .desc-about {
+  margin: 30px 0;
+  letter-spacing: 2px;
+}
+
+/* services */
+section#services .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section#services .service-title {
+  font-size: 2rem;
+}
+
+section#services .services {
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section#services .service {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  margin: 15px 60px;
+}
+
+section#services .service i {
+  color: var(--main);
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+section#services .service .service-desc {
+  font-style: italic;
+  color: #ccc;
+}
+
+/* pics */
+section#pics .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section#pics .photos-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+section#pics .pics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section#pics .pic {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(25, 25, 25);
+  margin: 15px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* contact */
+section#contact .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+section#contact .contact-area,
+section#contact .adress-area {
+  margin: 30px;
+}
+
+section#contact .contact-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+section#contact .contact {
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+/* footer */
+footer {
+  padding: 30px;
+}
+footer .container {
+  display: flex;
+  justify-content: center;
+}
+
+/* media queries */
+@media screen and (max-width: 768px) {
+  #header .menu-desktop-area {
+    display: none;
+  }
+  #header .menu-mobile-area {
+    display: flex;
+  }
+  section#pics .pic {
+    width: 400px;
+  }
+  section#about .image-about {
+    display: none;
+  }
+}
